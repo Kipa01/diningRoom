@@ -1,0 +1,161 @@
+//==========ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro-Light.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Light.woff') format('woff'), url('../fonts/MyriadPro-Light.ttf') format('truetype'), url('../fonts/MyriadPro-Light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-lightsemiext';
+  src: url('../fonts/myriadpro-lightsemiext.eot');
+  src: local('☺'), url('../fonts/myriadpro-lightsemiext.woff') format('woff'), url('../fonts/myriadpro-lightsemiext.ttf') format('truetype'), url('../fonts/myriadpro-lightsemiext.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+//==========/ПОДКЛЮЧЕНИЕ ШРИФТОВ==========//
+
+//==========ЦВЕТА==========//
+
+$main: #121212;
+$white: #ffffff;
+$gray: #777777;
+$orange: #ffaf2d;
+$green: #00aa4b;
+
+//==========/ЦВЕТА==========//
+
+//==========ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+body {
+  font-family: 'MyriadPro';
+  font-weight: 400;
+  font-size: 16px;
+  color: $main;
+  &.lock {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 4;
+      background-color: rgba(#000, .5);
+    }
+  }
+  &.bottom-lock {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      background-color: rgba(#000, .5);
+    }
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  background-color: #f5f2f2;
+}
+
+//==========/ОБНУЛЕНИЕ И ОБЩИЕ ПАРАМЕТРЫ==========//
+
+//==========ОСНОВНАЯ СЕТКА==========//
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1585px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//==========/ОСНОВНАЯ СЕТКА==========//
+
+//==========ДОПОЛНИТЕЛЬНАЯ СЕТКА==========//
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1442px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//==========/ДОПОЛНИТЕЛЬНАЯ СЕТКА==========//
+
+//========ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//
+
+@import './blocks/header';
+@import './blocks/footer';
+@import './blocks/select';
+@import './blocks/main';
+@import './blocks/news';
+@import './blocks/recom';
+@import './blocks/solutions';
+@import './blocks/font-awesome.min';
+@import './blocks/normalize';
+
+////========/ПОДКЛЮЧЕНИЕ ФАЙЛОВ СО СТИЛЯМИ========//
